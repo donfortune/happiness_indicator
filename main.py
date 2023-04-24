@@ -23,6 +23,13 @@ if xaxis == 'GDP' and yaxis == 'Happiness' and country in countrys.values:
 elif xaxis == 'GDP' and yaxis == 'Generosity':
     figure = px.scatter(x=general, y=gdps, labels={'x': 'general', 'y': 'gdps'})
     st.plotly_chart(figure)
-#elif
+elif xaxis == 'Happiness' and yaxis == 'Generosity':
+    figure = px.scatter(x=general, y=happy, labels={'x': 'general', 'y': 'happy'})
+    st.plotly_chart(figure)
+elif xaxis == 'Generosity' and yaxis == 'Happiness':
+    figure = px.scatter(x=happy, y=general, labels={'x': 'happy', 'y': 'general'})
+    st.plotly_chart(figure)
+else:
+    st.info('Enter a valid selection')
 
 
