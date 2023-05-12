@@ -2,7 +2,7 @@ import streamlit as st
 import plotly.express as px
 import pandas as pd
 
-data = pd.read_csv('happy.csv')
+data = pd.read_csv('happy.csv') #load the data
 
 st.title('In Search For Happiness')
 country = st.text_input('Enter the name of your country:')
